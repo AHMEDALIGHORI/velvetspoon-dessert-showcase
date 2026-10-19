@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">Velvetspoon animated dessert showcase</title>
+  <desc id="desc">A warm animated banner showing a dessert can, floating fruit, and the Velvetspoon name.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8ad34"/>
+      <stop offset=".48" stop-color="#d66b1f"/>
+      <stop offset="1" stop-color="#38170e"/>
+    </linearGradient>
+    <linearGradient id="can" x1="0" x2="1">
+      <stop stop-color="#b86e05"/>
+      <stop offset=".3" stop-color="#f6b10f"/>
+      <stop offset=".72" stop-color="#f6c32d"/>
+      <stop offset="1" stop-color="#9f5504"/>
+    </linearGradient>
+    <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#fff8e7"/>
+      <stop offset="1" stop-color="#f5d59b"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="1060" cy="40" r="180" fill="#fff" opacity=".08"/>
+  <circle cx="180" cy="390" r="190" fill="#5c1f0d" opacity=".16"/>
+  <g fill="#fff" opacity=".2">
+    <circle cx="100" cy="82" r="4"><animate attributeName="cy" values="82;62;82" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="1040" cy="290" r="5"><animate attributeName="cy" values="290;265;290" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="930" cy="92" r="3"><animate attributeName="cy" values="92;72;92" dur="3.5s" repeatCount="indefinite"/></circle>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#fff">
+    <text x="76" y="118" font-size="18" letter-spacing="5" opacity=".78">VELVETSPOON</text>
+    <text x="72" y="198" font-size="68" font-weight="700">Desserts</text>
+    <text x="72" y="264" font-size="68" font-weight="700">in a can.</text>
+    <text x="76" y="316" font-size="18" opacity=".82">A little luxury, ready whenever you are.</text>
+  </g>
+  <ellipse cx="820" cy="366" rx="180" ry="20" fill="#1b0d08" opacity=".35" filter="url(#shadow)"/>
+  <g transform="translate(738 48)">
+    <animateTransform attributeName="transform" type="translate" values="738 48;738 38;738 48" dur="5s" repeatCount="indefinite"/>
+    <g transform="rotate(7 95 170)">
+      <path d="M25 70V300a70 18 0 0 0 140 0V70Z" fill="url(#can)"/>
+      <path d="M25 106a70 18 0 0 0 140 0v140a70 18 0 0 1-140 0Z" fill="url(#cream)"/>
+      <text x="95" y="143" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-style="italic" font-weight="700" fill="#d9620b">Velvetspoon</text>
+      <rect x="48" y="163" width="94" height="28" rx="5" fill="#d9620b"/>
+      <text x="95" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#fff0c9">MANGO</text>
+      <circle cx="70" cy="220" r="16" fill="#ffb627" stroke="#d9620b" stroke-width="2"/>
+      <path d="M42 295a70 18 0 0 0 106 0v14a70 18 0 0 1-106 0Z" fill="#e9edf1"/>
+      <ellipse cx="95" cy="70" rx="70" ry="18" fill="#f4f5f7"/>
+      <path d="M45 68c22-25 72-25 100 0-16 15-78 15-100 0Z" fill="#fff3cf"/>
+      <rect x="88" y="-22" width="14" height="88" rx="4" fill="#f5b400" transform="rotate(12 95 30)"/>
+    </g>
+  </g>
+  <g fill="#ffd84a">
+    <path d="M1035 145c30-25 67-10 62 24-5 33-40 55-72 37-20-12-15-42 10-61Z">
+      <animateTransform attributeName="transform" type="rotate" values="-8 1050 175;8 1050 175;-8 1050 175" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1005 160c18 10 40 12 65 3" stroke="#f08a0e" stroke-width="5" fill="none"/>
+  </g>
+</svg>
