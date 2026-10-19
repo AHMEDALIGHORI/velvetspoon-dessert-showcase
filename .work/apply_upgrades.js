@@ -1,0 +1,17 @@
+const fs=require('fs');
+const path='C:/Users/user/Desktop/the/index.html';
+const py=fs.readFileSync('C:/Users/user/Desktop/the/.work/upgrade_velvetspoon.py','utf8');
+const grab=(re)=>{const m=py.match(re);if(!m)throw new Error('missing section');return m[1]};
+const css=grab(/css = r'''([\s\S]*?)'''/);
+const extra=grab(/extra = r'''([\s\S]*?)'''/);
+const markup=grab(/markup = '([\s\S]*?)'\ns =/);
+let s=fs.readFileSync(path,'utf8');
+s=s.replace('<button class="user" aria-label="Cart">','<button class="sound-toggle" id="sound-toggle" aria-label="Toggle sound" aria-pressed="false">Sound</button><button class="user" id="cart-open" aria-label="Cart">');
+s=s.replace('</style>',css+'</style>');
+s=s.replace('</main>',markup+'</main>');
+s=s.replace('let index=0,qty=1,cart=0,busy=false,current=null;','let index=0,qty=1,cart=0,busy=false,current=null,cartItems=[],soundOn=false;');
+s=s.replace("const $=s=>document.querySelector(s),stage=","if(!window.gsap){window.gsap={timeline:()=>{const t={from(){return t},to(){return t}};return t},fromTo:(el,a,b)=>{if(b&&b.onComplete)b.onComplete()}};}const $=s=>document.querySelector(s),stage=");
+s=s.replace('openPanel(label)','openEnhancedPanel(label)');
+s=s.replace('\n})();\n</script>','\n'+extra+'\n})();\n</script>');
+fs.writeFileSync(path,s,'utf8');
+console.log('updated',fs.statSync(path).size);
